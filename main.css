@@ -1,0 +1,125 @@
+/* Start Global */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+}
+p {
+    font-size: 15px;
+}
+body {
+    font-family: 'Lexend Deca', sans-serif;
+}
+/* End Global */
+/* Start All */
+.all {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 40px 10px;
+}
+.all > div {
+    height: 350px;
+    width: 100%;
+}
+.container {
+    padding: 35px;
+}
+.first {
+    background: var(--Bright-orange);
+    border-radius: 10px 10px 0 0;
+}
+.second {
+    background-color: var(--Dark-cyan);
+}
+.third {
+    background-color: var(--Very-dark-cyan);
+    border-radius: 0 0 10px 10px;
+}
+/* End All */
+/* Start Head */
+h1 {
+    color: var(--Very-light-gray-background-headings-buttons);
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+    margin: 20px 0;
+}
+/* End Head */
+/* Start paragrapgh */
+p {
+    color: var(--Transparent-white-paragraphs);
+    padding-right: 45px;
+    margin-bottom: 25px;
+}
+/* End paragraph */
+/* Start Button */
+button {
+    border: 0;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 15px;
+    border: 2px solid rgb(239, 239, 239);
+}
+.first button {
+    color:hsl(31, 77%, 52%)
+}
+
+.first button:hover {
+    background: hsl(31, 77%, 52%);
+}
+.second button {
+    color: var(--Dark-cyan);
+}
+.second button:hover {
+    background: var(--Dark-cyan);
+}
+.third button {
+    color: var(--Very-dark-cyan);
+}
+.third button:hover {
+    background: var(--Very-dark-cyan);
+}
+button:hover {
+    color: rgb(239, 239, 239);
+    cursor: pointer;
+}
+/* End Button */
+/* Start Queries */
+@media (min-width: 768px) {
+    .all {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .first {
+        border-radius: 10px 0 0 10px;
+    }
+    .third {
+        border-radius: 0 10px 10px 0;
+    }
+    .all > div {
+        height: 500px;
+    }
+    .container {
+        height: 500px;
+    }
+    p {
+        line-height: 1.5;
+        font-size: 18px;
+        margin-bottom: 70px;
+        padding: 0;
+    }
+    h1 {
+        margin: 35px 0;
+    }
+}
